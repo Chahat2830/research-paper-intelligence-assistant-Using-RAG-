@@ -1,0 +1,319 @@
+.literature-review {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #344565;
+}
+
+.literature-heading {
+    margin-bottom: 26px;
+}
+
+.literature-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #7775df;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+}
+
+.literature-heading h1 {
+    margin: 12px 0 10px;
+    color: #293c68;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 800;
+}
+
+.literature-heading>p {
+    max-width: 700px;
+    margin: 0;
+    color: #7d8ba5;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.literature-form,
+.literature-results {
+    padding: 24px;
+    border: 1px solid rgba(190, 205, 234, 0.45);
+    border-radius: 22px;
+    background: #eef3fb;
+    box-shadow:
+        7px 7px 18px rgba(174, 188, 213, 0.24),
+        -7px -7px 18px rgba(255, 255, 255, 0.8);
+}
+
+.literature-form-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.literature-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    background: #e0eaff;
+    color: #7184df;
+}
+
+.literature-form-heading h2 {
+    margin: 0 0 5px;
+    color: #344565;
+    font-size: 17px;
+}
+
+.literature-form-heading p,
+.literature-paper-heading p {
+    margin: 0;
+    color: #8290aa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.literature-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #4d6187;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.literature-topic-input {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 15px;
+    border: 1px solid #dce5f4;
+    border-radius: 13px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.72);
+    color: #344565;
+    font: inherit;
+    font-size: 14px;
+}
+
+.literature-topic-input::placeholder {
+    color: #9aa7bd;
+}
+
+.literature-topic-input:focus {
+    border-color: #8ba2ed;
+    box-shadow: 0 0 0 3px rgba(120, 152, 239, 0.13);
+}
+
+.literature-paper-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 28px 0 14px;
+    color: #7184df;
+}
+
+.literature-paper-heading h3 {
+    margin: 0 0 5px;
+    color: #344565;
+    font-size: 15px;
+}
+
+.literature-paper-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.literature-paper-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #dce5f4;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.literature-paper-option.selected {
+    border-color: #a6b7f0;
+    background: #e7edff;
+}
+
+.literature-paper-option input {
+    width: 16px;
+    height: 16px;
+    accent-color: #7775df;
+    flex-shrink: 0;
+}
+
+.literature-paper-file {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    background: #e0eaff;
+    color: #7184df;
+}
+
+.literature-paper-title {
+    flex: 1;
+    min-width: 0;
+    color: #465773;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.literature-selected-icon {
+    flex-shrink: 0;
+    color: #6f7fe0;
+}
+
+.literature-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 30px 15px;
+    border: 1px dashed #bdcce7;
+    border-radius: 16px;
+    color: #8290aa;
+    text-align: center;
+}
+
+.literature-empty p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.literature-error {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 13px;
+    background: #fff0f1;
+    color: #c23e57;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.literature-generate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 46px;
+    margin-top: 24px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #7898ef, #7775df);
+    box-shadow: 0 6px 14px rgba(112, 128, 220, 0.2);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.literature-generate-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.literature-loading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 15px;
+    background: #e5edff;
+    color: #5e75c3;
+    font-size: 13px;
+}
+
+.literature-results {
+    margin-top: 28px;
+}
+
+.literature-results-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.literature-results-heading h2 {
+    margin: 8px 0 0;
+    color: #293c68;
+    font-size: 21px;
+    overflow-wrap: anywhere;
+}
+
+.literature-copy-button {
+    padding: 10px 14px;
+    border: 1px solid #cbd7f1;
+    border-radius: 11px;
+    background: #e6edff;
+    color: #5c71bf;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.literature-review-content {
+    color: #566783;
+    font-size: 14px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.literature-spin {
+    animation: literature-rotate 1s linear infinite;
+}
+
+@keyframes literature-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .literature-form,
+    .literature-results {
+        padding: 18px;
+    }
+
+    .literature-generate-button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .literature-spin {
+        animation: none;
+    }
+
+    .literature-paper-option {
+        transition: none;
+    }
+}

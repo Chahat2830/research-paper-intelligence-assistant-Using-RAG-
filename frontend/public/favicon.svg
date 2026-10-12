@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="5" x2="57" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BA8FF"/>
+      <stop offset="1" stop-color="#7770E8"/>
+    </linearGradient>
+    <linearGradient id="page" x1="18" y1="12" x2="45" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8EEFF"/>
+    </linearGradient>
+    <filter id="shadow" x="5" y="4" width="54" height="57" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#354A9A" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="19" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <path d="M17 17.5c0-2.2 1.8-4 4-4h20l8 8v25c0 2.2-1.8 4-4 4H21c-2.2 0-4-1.8-4-4v-29Z" fill="url(#page)"/>
+    <path d="M41 13.5v7c0 .6.4 1 1 1h7" fill="#D7E1FF"/>
+    <path d="M24 27h17M24 33h17M24 39h11" stroke="#7887D9" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M46.5 29.5 48 34l4.5 1.5L48 37l-1.5 4.5L45 37l-4.5-1.5L45 34l1.5-4.5Z" fill="#8C82F3" stroke="#FFFFFF" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+</svg>

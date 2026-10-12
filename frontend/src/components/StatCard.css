@@ -1,0 +1,111 @@
+.stat-card {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 23px;
+    background: #edf4fb;
+    box-shadow:
+        8px 8px 20px rgba(163, 177, 198, 0.22),
+        -8px -8px 20px rgba(255, 255, 255, 0.88);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        11px 11px 24px rgba(163, 177, 198, 0.25),
+        -8px -8px 22px rgba(255, 255, 255, 0.9);
+}
+
+.stat-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.stat-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #e8f0fa;
+    box-shadow:
+        inset 3px 3px 7px rgba(163, 177, 198, 0.16),
+        inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+}
+
+.stat-card--blue .stat-card__icon {
+    color: #5488df;
+}
+
+.stat-card--purple .stat-card__icon {
+    color: #8c78d9;
+}
+
+.stat-card--green .stat-card__icon {
+    color: #32a785;
+}
+
+.stat-card--orange .stat-card__icon {
+    color: #e4a15b;
+}
+
+.stat-card__change {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 9px;
+    border-radius: 10px;
+    color: #299a78;
+    background: #e4f5ed;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.stat-card__title {
+    margin: 0 0 8px;
+    color: #7d8fa7;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.stat-card__value {
+    margin: 0;
+    color: #263d5b;
+    font-size: clamp(25px, 2vw, 32px);
+    font-weight: 750;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+}
+
+.stat-card__description {
+    margin: 10px 0 0;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+    .stat-card {
+        padding: 17px;
+        border-radius: 18px;
+    }
+
+    .stat-card__top {
+        margin-bottom: 17px;
+    }
+
+    .stat-card__icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+    }
+}

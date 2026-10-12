@@ -1,0 +1,121 @@
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    padding: 32px 20px;
+    border: 1px solid rgba(190, 205, 234, 0.45);
+    border-radius: 22px;
+    background: #eef3fb;
+    box-shadow:
+        7px 7px 18px rgba(174, 188, 213, 0.2),
+        -7px -7px 18px rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.loading-state-visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 20px;
+}
+
+.loading-state-orbit {
+    position: absolute;
+    inset: 0;
+    border: 1px solid #c9d7f7;
+    border-radius: 50%;
+}
+
+.loading-orbit-one {
+    transform: rotate(35deg) scaleY(0.55);
+}
+
+.loading-orbit-two {
+    transform: rotate(-35deg) scaleY(0.55);
+}
+
+.loading-state-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 19px;
+    background: linear-gradient(135deg, #e0eaff, #e9e3ff);
+    color: #7775df;
+    box-shadow:
+        4px 4px 10px rgba(174, 188, 213, 0.25),
+        -4px -4px 10px rgba(255, 255, 255, 0.9);
+}
+
+.loading-state-spinner {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    color: #7184df;
+    animation: loading-state-spin 1s linear infinite;
+}
+
+.loading-state h3 {
+    margin: 0 0 8px;
+    color: #293c68;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.loading-state p {
+    max-width: 380px;
+    margin: 0;
+    color: #8290aa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.loading-state-progress {
+    width: min(220px, 80%);
+    height: 5px;
+    margin-top: 24px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #dce5f5;
+}
+
+.loading-state-progress span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #7898ef, #8a7ce9);
+    animation: loading-state-progress 1.8s ease-in-out infinite;
+}
+
+@keyframes loading-state-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-state-progress {
+    0% {
+        transform: translateX(-110%);
+    }
+
+    50% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(350%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .loading-state-spinner,
+    .loading-state-progress span {
+        animation: none;
+    }
+}

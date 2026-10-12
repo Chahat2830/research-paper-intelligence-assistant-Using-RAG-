@@ -1,0 +1,102 @@
+.feedback-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 220px;
+    padding: 32px 24px;
+    text-align: center;
+    background: #edf4fb;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    box-shadow:
+        8px 8px 20px rgba(163, 177, 198, 0.22),
+        -8px -8px 20px rgba(255, 255, 255, 0.85);
+}
+
+.feedback-state__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 19px;
+    background: #e7f0fb;
+    box-shadow:
+        inset 3px 3px 7px rgba(163, 177, 198, 0.16),
+        inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+}
+
+.feedback-state h3 {
+    margin: 0;
+    color: #263d5b;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.feedback-state__message {
+    max-width: 440px;
+    margin: 0;
+    color: #7d8fa7;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.feedback-state--blue .feedback-state__icon {
+    color: #5285d8;
+}
+
+.feedback-state--red .feedback-state__icon {
+    color: #d95f72;
+}
+
+.feedback-state--green .feedback-state__icon {
+    color: #299b79;
+}
+
+.feedback-state--red {
+    background: #f8eff1;
+}
+
+.feedback-state--green {
+    background: #edf7f2;
+}
+
+.feedback-state__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 11px 17px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6596e8, #477bd0);
+    box-shadow: 0 5px 12px rgba(71, 123, 208, 0.2);
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.feedback-state__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(71, 123, 208, 0.28);
+}
+
+.feedback-state__button:focus-visible {
+    outline: 2px solid #477bd0;
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    .feedback-state {
+        min-height: 190px;
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+}

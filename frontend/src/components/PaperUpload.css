@@ -1,0 +1,259 @@
+.paper-upload {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid rgba(176, 197, 235, 0.35);
+    border-radius: 24px;
+    background: #eef3fb;
+    box-shadow:
+        8px 8px 20px rgba(174, 188, 213, 0.3),
+        -8px -8px 20px rgba(255, 255, 255, 0.85);
+}
+
+.paper-upload-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 220px;
+    padding: 28px 20px;
+    border: 2px dashed #b4c7ed;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.45);
+    color: #6681c6;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.paper-upload-zone:hover,
+.paper-upload-zone.dragging {
+    border-color: #7188e9;
+    background: #e4ecff;
+}
+
+.paper-upload-zone.dragging {
+    transform: scale(0.99);
+}
+
+.paper-upload-zone:focus-visible {
+    outline: 3px solid #7188e9;
+    outline-offset: 4px;
+}
+
+.paper-upload-zone h3 {
+    margin: 4px 0 0;
+    color: #293c68;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.paper-upload-zone p {
+    margin: 0;
+    color: #687895;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.paper-upload-zone span {
+    color: #8a98b1;
+    font-size: 12px;
+}
+
+.paper-upload-file {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+    padding: 16px;
+    border: 1px solid #dce5f6;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #6c83ce;
+}
+
+.paper-upload-file-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.paper-upload-file-info strong {
+    overflow-wrap: anywhere;
+    color: #354668;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.paper-upload-file-info small {
+    color: #8794ad;
+    font-size: 12px;
+}
+
+.paper-upload-file button {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    place-items: center;
+    border: none;
+    border-radius: 10px;
+    background: #f0f3fa;
+    color: #8794ad;
+    cursor: pointer;
+}
+
+.paper-upload-file button:hover {
+    background: #ffe8ec;
+    color: #d45e78;
+}
+
+.paper-upload-progress {
+    margin-top: 20px;
+}
+
+.paper-upload-progress-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+    color: #4b5d7f;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.paper-upload-progress-track {
+    height: 9px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #dce5f5;
+}
+
+.paper-upload-progress-track div {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #91b5ff, #777ce9);
+    transition: width 0.2s ease;
+}
+
+.paper-upload-progress>small {
+    display: block;
+    margin-top: 8px;
+    color: #8794ad;
+    font-size: 12px;
+}
+
+.paper-upload-error {
+    margin: 16px 0 0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: #fff0f1;
+    color: #c23e57;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.paper-upload-success {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 15px;
+    border: 1px solid #cce9db;
+    border-radius: 14px;
+    background: #effaf4;
+    color: #27845b;
+}
+
+.paper-upload-success strong {
+    font-size: 14px;
+}
+
+.paper-upload-success p {
+    margin: 6px 0 0;
+    overflow-wrap: anywhere;
+    color: #58866f;
+    font-size: 12px;
+}
+
+.paper-upload-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #7898ef, #7775df);
+    box-shadow: 0 7px 16px rgba(112, 128, 220, 0.25);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.paper-upload-submit:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(112, 128, 220, 0.3);
+}
+
+.paper-upload-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.paper-upload-submit:focus-visible {
+    outline: 3px solid #7188e9;
+    outline-offset: 3px;
+}
+
+.paper-upload-submit .spin {
+    animation: paper-upload-spin 1s linear infinite;
+}
+
+@keyframes paper-upload-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .paper-upload {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .paper-upload-zone {
+        min-height: 190px;
+        padding: 22px 14px;
+    }
+
+    .paper-upload-zone h3 {
+        font-size: 16px;
+    }
+
+    .paper-upload-zone p {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .paper-upload *,
+    .paper-upload *::before,
+    .paper-upload *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
